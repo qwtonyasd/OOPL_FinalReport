@@ -70,7 +70,14 @@
 
 `SpellManager` 處理玩家的主動技能的冷卻與釋放。`Spell.hpp`則是兩個法術的抽象類別
 
+`Unit.hpp`：作為遊戲中所有動態生物（如敵方怪物、我方兵營士兵的抽象基底類別接著由`Enemy.hpp`、`Soldier.hpp`實做敵方於我方的生物
+
 ### 程式技術
+Smart Pointers：如 std::shared_ptr<Enemy>、std::shared_ptr<Tower>... 當防禦塔被賣掉、投射物落地、怪物死亡時，系統會自動安全地釋放記憶體
+
+抽象類別：如四種塔繼承字Tower.hpp，生物繼承Unit.hpp等等
+
+純虛擬函式：例如`Tower.hpp`中有`virtual void Upgrade() = 0;`告訴下面衍生出來的四種防禦塔都必須親自實作屬於你自己的升級邏輯
 
 ### 使用到 AI/AI Agent 的部分 (沒有用到者，不需要寫這篇)
 
