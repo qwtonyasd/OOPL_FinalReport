@@ -60,9 +60,14 @@
 ### 程式架構
 將不同的遊戲物件分權給專職的 Manager控管，並由 App 做為最高統帥。
 
-GameManager
+GameManager 管控遊戲中金錢增減、波次、遊戲內生命值
 
-GameData
+GameData 紀錄遊戲外升級的加成。UpgradeMenu 管理遊戲外升級的選單。兩者結合創造出遊戲外升級
+
+ˋTower.hppˋ 為四座塔，的抽象基底類別向下衍生出四種塔，TowerManager 統一管理場上所有防禦塔的行為輪詢與繪製，
+
+SpellManager 獨立處理玩家的主動技能（如火球術、援軍）的冷卻與釋放
+
 ### 程式技術
 
 ### 使用到 AI/AI Agent 的部分 (沒有用到者，不需要寫這篇)
