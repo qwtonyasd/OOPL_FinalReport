@@ -77,7 +77,7 @@
 ### 程式技術
 Smart Pointers：如 std::shared_ptr<Enemy>、std::shared_ptr<Tower>... 當防禦塔被賣掉、投射物落地、怪物死亡時，系統會自動安全地釋放記憶體
 
-抽象類別：如四種塔繼承字Tower.hpp，生物繼承Unit.hpp等等
+抽象類別：如四種塔繼承自Tower.hpp，生物繼承Unit.hpp等等
 
 純虛擬函式：例如`Tower.hpp`中有`virtual void Upgrade() = 0;`告訴下面衍生出來的四種防禦塔都必須親自實作屬於你自己的升級邏輯
 
